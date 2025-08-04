@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jewelry | Art works</title>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Local JS -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+
+    <style>
+        /* Inline styles for particles.js background */
+        #particles-js {
+            background-color: #000000; 
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: gold;
+            text-align: center;
+            padding: 100px;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+            }
+
+    </style>
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js" style="background:#0d47a1; position:absolute; width:100%; height:100%; z-index:-1;"></div>
+
+
+    <!-- Header -->
+    <header class="glass">
+        <a href="#" class="logo">
+            <i class="fas fa-gem"></i>
+            LuxePlay
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Jewelry</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-heart"></i></a>
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <button class="mode-toggle" id="modeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="floating">Where Artistry Meets Luxury</h1>
+            <p>Discover breathtaking artwork and exquisite jewelry crafted with passion and precision</p>
+            <div class="hero-btns">
+                <a href="#" class="btn btn-primary">Explore Collection</a>
+                <a href="#" class="btn btn-outline">View Artists</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="section-header animate-on-scroll">
+            <h2>Curated Masterpieces</h2>
+            <p>Explore our exclusive collection of unique artworks and handcrafted jewelry</p>
+        </div>
+
+        <div class="gallery-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Paintings</button>
+            <button class="filter-btn">Sculptures</button>
+            <button class="filter-btn">Necklaces</button>
+            <button class="filter-btn">Rings</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item animate-on-scroll">
+                <div class="gallery-item-inner">
+                    <div class="gallery-item-front">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600" alt="Golden Serenity" class="gallery-item-img">
+                    </div>
+                    <div class="gallery-item-back">
+                        <h3 class="item-title">Golden Serenity</h3>
+                        <p class="item-price">$2,400</p>
+                        <p class="item-description">Handcrafted 18K gold necklace with diamond accents</p>
+                        <div class="item-actions">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-outline">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <div class="gallery-item-inner">
+                    <div class="gallery-item-front">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600" alt="Emerald Dreams" class="gallery-item-img">
+                    </div>
+                    <div class="gallery-item-back">
+                        <h3 class="item-title">Emerald Dreams</h3>
+                        <p class="item-price">$3,200</p>
+                        <p class="item-description">Vintage-inspired emerald ring set in platinum</p>
+                        <div class="item-actions">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-outline">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <div class="gallery-item-inner">
+                    <div class="gallery-item-front">
+                        <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=600" alt="Sapphire Embrace" class="gallery-item-img">
+                    </div>
+                    <div class="gallery-item-back">
+                        <h3 class="item-title">Sapphire Embrace</h3>
+                        <p class="item-price">$2,800</p>
+                        <p class="item-description">Contemporary sapphire bracelet with diamond accents</p>
+                        <div class="item-actions">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-outline">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <div class="gallery-item-inner">
+                    <div class="gallery-item-front">
+                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600" alt="Cosmic Harmony" class="gallery-item-img">
+                    </div>
+                    <div class="gallery-item-back">
+                        <h3 class="item-title">Cosmic Harmony</h3>
+                        <p class="item-price">$4,500</p>
+                        <p class="item-description">Abstract cosmic-inspired painting on canvas</p>
+                        <div class="item-actions">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-outline">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <div class="gallery-item-inner">
+                    <div class="gallery-item-front">
+                        <img src="https://images.unsplash.com/photo-1588449668365-d15e397f6787?auto=format&fit=crop&w=600" alt="Diamond Essence" class="gallery-item-img">
+                    </div>
+                    <div class="gallery-item-back">
+                        <h3 class="item-title">Diamond Essence</h3>
+                        <p class="item-price">$5,700</p>
+                        <p class="item-description">Exquisite diamond earrings with platinum setting</p>
+                        <div class="item-actions">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-outline">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <div class="gallery-item-inner">
+                    <div class="gallery-item-front">
+                        <img src="https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?auto=format&fit=crop&w=600" alt="Azure Reflections" class="gallery-item-img">
+                    </div>
+                    <div class="gallery-item-back">
+                        <h3 class="item-title">Azure Reflections</h3>
+                        <p class="item-price">$3,100</p>
+                        <p class="item-description">Contemporary art piece with azure tones and gold leaf</p>
+                        <div class="item-actions">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-outline">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artist -->
+    <section class="featured-artist holographic">
+        <div class="section-header animate-on-scroll">
+            <h2>Featured Artist</h2>
+            <p>Meet the brilliant minds behind our exclusive creations</p>
+        </div>
+
+        <div class="artist-container">
+            <div class="artist-img animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800" alt="Elena Rodriguez">
+            </div>
+            <div class="artist-info animate-on-scroll">
+                <h3>Elena Rodriguez</h3>
+                <p>Elena merges traditional goldsmith techniques with contemporary design, creating pieces that tell stories of heritage and innovation. Her jewelry has been showcased in Paris, Milan, and Tokyo.</p>
+                <p>With over 15 years of experience, Elena sources only the finest ethically mined gemstones and precious metals, ensuring each piece is as sustainable as it is beautiful.</p>
+                <a href="#" class="btn btn-outline">View Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header animate-on-scroll">
+            <h2>Client Experiences</h2>
+            <p>What our collectors say about LuxePlay</p>
+        </div>
+
+        <div class="testimonial-container glass animate-on-scroll">
+            <div class="testimonial-slide active">
+                <p class="testimonial-content">The craftsmanship of the 'Golden Serenity' necklace exceeded all my expectations. It's not just jewelry, it's wearable art that sparks conversations wherever I go.</p>
+                <p class="testimonial-author">Sophia Williams</p>
+                <p class="testimonial-role">Art Collector, New York</p>
+            </div>
+            <div class="testimonial-slide">
+                <p class="testimonial-content">I've purchased several pieces from LuxePlay over the years, and each acquisition feels like adding a new chapter to my personal collection. Their attention to detail is unparalleled.</p>
+                <p class="testimonial-author">James Chen</p>
+                <p class="testimonial-role">Gallery Owner, Hong Kong</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="holographic">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>LuxePlay</h3>
+                <p>Where artistry meets luxury in every creation. We celebrate the beauty of handcrafted excellence.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Featured Artists</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Jewelry Collection</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Artworks</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Behind the Scenes</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Shipping & Returns</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Payment Methods</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Care Instructions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe for exclusive access to new collections, artist features, and special events.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" class="newsletter-input">
+                    <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LuxePlay Gallery. All rights reserved. Crafted with <i class="fas fa-heart"></i> for art enthusiasts.</p>
+        </div>
+    </footer>
+
+<script>
+particlesJS.load('particles-js', 'js/particles.js-master/demo/particles.json', function() {
+    console.log('particles.json loaded...');
+});
+</script>
+
+</body>
+</html>

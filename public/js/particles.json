@@ -1,0 +1,58 @@
+{
+  "particles": {
+    "number": { "value": 80 },
+    "color": { "value": "#d4af37" },  // Rich gold
+    "shape": { "type": "circle" },
+    "opacity": {
+      "value": 0.7,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0.4,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 4,
+      "random": true
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#d4af37",
+      "opacity": 0.5,
+      "width": 1.5
+    },
+    "move": {
+      "enable": true,
+      "speed": 1.5,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    }
+  },
+  "retina_detect": true
+}
+{
+  "name": "particles.json",
+  "version": "1.0.0",
+  "description": "Particle configuration for a futuristic gold-themed background",
+  "author": "Javan Ramsey",
+  "license": "MIT"
+}
