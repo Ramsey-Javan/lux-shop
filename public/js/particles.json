@@ -1,58 +1,34 @@
 {
   "particles": {
-    "number": { "value": 80 },
-    "color": { "value": "#d4af37" },  // Rich gold
+    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+    "color": { "value": "#FFD700" },
     "shape": { "type": "circle" },
-    "opacity": {
-      "value": 0.7,
-      "anim": {
-        "enable": true,
-        "speed": 1,
-        "opacity_min": 0.4,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 4,
-      "random": true
-    },
+    "opacity": { "value": 0.8, "random": false },
+    "size": { "value": 4, "random": true },
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#d4af37",
-      "opacity": 0.5,
+      "color": "#FFD700",
+      "opacity": 0.6,
       "width": 1.5
     },
     "move": {
       "enable": true,
-      "speed": 1.5,
+      "speed": 4,
       "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false
+      "out_mode": "bounce"
     }
   },
   "interactivity": {
     "detect_on": "canvas",
     "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
+      "onhover": { "enable": true, "mode": "repulse" },
+      "onclick": { "enable": true, "mode": "push" }
+    },
+    "modes": {
+      "repulse": { "distance": 100 },
+      "push": { "particles_nb": 4 }
     }
   },
   "retina_detect": true
-}
-{
-  "name": "particles.json",
-  "version": "1.0.0",
-  "description": "Particle configuration for a futuristic gold-themed background",
-  "author": "Javan Ramsey",
-  "license": "MIT"
 }

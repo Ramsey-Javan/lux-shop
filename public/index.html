@@ -3,57 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jewelry | Art works</title>
-
+    <title>LuxePlay | Art & Jewelry Gallery</title>
+    <meta name="description" content="Discover exquisite artwork and handcrafted jewelry at LuxePlay. Curated masterpieces from talented artists.">
+    
     <!-- External Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Local JS -->
-    <script src="js/particles.min.js"></script>
-    <script src="js/scripts.js" defer></script>
-
-    <style>
-        /* Inline styles for particles.js background */
-        #particles-js {
-            background-color: #000000; 
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            color: gold;
-            text-align: center;
-            padding: 100px;
-        }
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-dark);
-            }
-
-    </style>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
 </head>
 
 <body>
     <!-- Particle Background -->
-    <div id="particles-js" style="background:#0d47a1; position:absolute; width:100%; height:100%; z-index:-1;"></div>
-
+    <div id="particles-js"></div>
 
     <!-- Header -->
     <header class="glass">
@@ -61,20 +28,25 @@
             <i class="fas fa-gem"></i>
             LuxePlay
         </a>
+        
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Artists</a></li>
-                <li><a href="#">Jewelry</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#jewelry">Jewelry</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
         <div class="header-actions">
-            <a href="#"><i class="fas fa-search"></i></a>
-            <a href="#"><i class="fas fa-heart"></i></a>
-            <a href="#"><i class="fas fa-shopping-bag"></i></a>
-            <button class="mode-toggle" id="modeToggle">
+            <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+            <a href="#" aria-label="Favorites"><i class="fas fa-heart"></i></a>
+            <a href="#" aria-label="Shopping Cart"><i class="fas fa-shopping-bag"></i></a>
+            <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">
                 <i class="fas fa-moon"></i>
             </button>
         </div>
@@ -86,32 +58,32 @@
             <h1 class="floating">Where Artistry Meets Luxury</h1>
             <p>Discover breathtaking artwork and exquisite jewelry crafted with passion and precision</p>
             <div class="hero-btns">
-                <a href="#" class="btn btn-primary">Explore Collection</a>
-                <a href="#" class="btn btn-outline">View Artists</a>
+                <a href="#gallery" class="btn btn-primary">Explore Collection</a>
+                <a href="#artists" class="btn btn-outline">View Artists</a>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery-section">
+    <section class="gallery-section" id="gallery">
         <div class="section-header animate-on-scroll">
             <h2>Curated Masterpieces</h2>
             <p>Explore our exclusive collection of unique artworks and handcrafted jewelry</p>
         </div>
 
         <div class="gallery-filters">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Paintings</button>
-            <button class="filter-btn">Sculptures</button>
-            <button class="filter-btn">Necklaces</button>
-            <button class="filter-btn">Rings</button>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="paintings">Paintings</button>
+            <button class="filter-btn" data-filter="sculptures">Sculptures</button>
+            <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+            <button class="filter-btn" data-filter="rings">Rings</button>
         </div>
 
         <div class="gallery-grid">
-            <div class="gallery-item animate-on-scroll">
+            <div class="gallery-item animate-on-scroll" data-category="necklaces">
                 <div class="gallery-item-inner">
                     <div class="gallery-item-front">
-                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600" alt="Golden Serenity" class="gallery-item-img">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600" alt="Golden Serenity Necklace" class="gallery-item-img">
                     </div>
                     <div class="gallery-item-back">
                         <h3 class="item-title">Golden Serenity</h3>
@@ -124,10 +96,10 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery-item animate-on-scroll">
+            <div class="gallery-item animate-on-scroll" data-category="rings">
                 <div class="gallery-item-inner">
                     <div class="gallery-item-front">
-                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600" alt="Emerald Dreams" class="gallery-item-img">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600" alt="Emerald Dreams Ring" class="gallery-item-img">
                     </div>
                     <div class="gallery-item-back">
                         <h3 class="item-title">Emerald Dreams</h3>
@@ -140,10 +112,10 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery-item animate-on-scroll">
+            <div class="gallery-item animate-on-scroll" data-category="necklaces">
                 <div class="gallery-item-inner">
                     <div class="gallery-item-front">
-                        <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=600" alt="Sapphire Embrace" class="gallery-item-img">
+                        <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=600" alt="Sapphire Embrace Bracelet" class="gallery-item-img">
                     </div>
                     <div class="gallery-item-back">
                         <h3 class="item-title">Sapphire Embrace</h3>
@@ -156,10 +128,10 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery-item animate-on-scroll">
+            <div class="gallery-item animate-on-scroll" data-category="paintings">
                 <div class="gallery-item-inner">
                     <div class="gallery-item-front">
-                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600" alt="Cosmic Harmony" class="gallery-item-img">
+                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600" alt="Cosmic Harmony Painting" class="gallery-item-img">
                     </div>
                     <div class="gallery-item-back">
                         <h3 class="item-title">Cosmic Harmony</h3>
@@ -172,10 +144,10 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery-item animate-on-scroll">
+            <div class="gallery-item animate-on-scroll" data-category="rings">
                 <div class="gallery-item-inner">
                     <div class="gallery-item-front">
-                        <img src="https://images.unsplash.com/photo-1588449668365-d15e397f6787?auto=format&fit=crop&w=600" alt="Diamond Essence" class="gallery-item-img">
+                        <img src="https://images.unsplash.com/photo-1588449668365-d15e397f6787?auto=format&fit=crop&w=600" alt="Diamond Essence Earrings" class="gallery-item-img">
                     </div>
                     <div class="gallery-item-back">
                         <h3 class="item-title">Diamond Essence</h3>
@@ -188,10 +160,10 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery-item animate-on-scroll">
+            <div class="gallery-item animate-on-scroll" data-category="paintings">
                 <div class="gallery-item-inner">
                     <div class="gallery-item-front">
-                        <img src="https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?auto=format&fit=crop&w=600" alt="Azure Reflections" class="gallery-item-img">
+                        <img src="https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?auto=format&fit=crop&w=600" alt="Azure Reflections Artwork" class="gallery-item-img">
                     </div>
                     <div class="gallery-item-back">
                         <h3 class="item-title">Azure Reflections</h3>
@@ -208,7 +180,7 @@
     </section>
 
     <!-- Featured Artist -->
-    <section class="featured-artist holographic">
+    <section class="featured-artist holographic" id="artists">
         <div class="section-header animate-on-scroll">
             <h2>Featured Artist</h2>
             <p>Meet the brilliant minds behind our exclusive creations</p>
@@ -255,17 +227,17 @@
                 <h3>LuxePlay</h3>
                 <p>Where artistry meets luxury in every creation. We celebrate the beauty of handcrafted excellence.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
             <div class="footer-column">
                 <h3>Explore</h3>
                 <ul>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Gallery</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Featured Artists</a></li>
+                    <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                    <li><a href="#artists"><i class="fas fa-chevron-right"></i> Featured Artists</a></li>
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Jewelry Collection</a></li>
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Artworks</a></li>
                     <li><a href="#"><i class="fas fa-chevron-right"></i> Behind the Scenes</a></li>
@@ -285,7 +257,7 @@
                 <h3>Newsletter</h3>
                 <p>Subscribe for exclusive access to new collections, artist features, and special events.</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Your email address" class="newsletter-input">
+                    <input type="email" placeholder="Your email address" class="newsletter-input" required>
                     <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
@@ -295,11 +267,8 @@
         </div>
     </footer>
 
-<script>
-particlesJS.load('particles-js', 'js/particles.js-master/demo/particles.json', function() {
-    console.log('particles.json loaded...');
-});
-</script>
-
+    <!-- Local JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
